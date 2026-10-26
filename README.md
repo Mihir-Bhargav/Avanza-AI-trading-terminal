@@ -12,6 +12,15 @@ agent that explains what is moving but never places a trade.
 > read a brokerage account, but it has no code path that places, modifies or
 > cancels an order.
 
+![Range terminal: watchlist, disclosures and chart](docs/screenshots/collage.png)
+
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/python-3.13-blue">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-app-black">
+  <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-backend-009688">
+  <img alt="Read-only" src="https://img.shields.io/badge/orders-read--only-critical">
+</p>
+
 ---
 
 ## Pages
