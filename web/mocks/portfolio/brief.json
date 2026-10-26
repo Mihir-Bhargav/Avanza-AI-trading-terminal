@@ -1,0 +1,306 @@
+{
+  "as_of": "2026-09-24T13:32",
+  "totals_sek": {
+    "portfolio": 82379,
+    "invested": 42859,
+    "cash": 1397,
+    "cash_pct": 80.7,
+    "cost_basis": 43918.38,
+    "unrealized_pnl": 7936.33,
+    "unrealized_pnl_pct": 6.7
+  },
+  "accounts": [
+    {
+      "account": "Account B",
+      "type": null,
+      "total_value": 62397,
+      "cash": 3540
+    },
+    {
+      "account": "Account A",
+      "type": null,
+      "total_value": 30554,
+      "cash": 3873
+    }
+  ],
+  "performance": {
+    "1d": {
+      "per_account": [],
+      "insights_total_sek": 34,
+      "best": null,
+      "worst": null
+    },
+    "1w": {
+      "per_account": [
+        {
+          "account": "Account B",
+          "change": 183,
+          "change_pct": 8.64
+        },
+        {
+          "account": "Account A",
+          "change": 674,
+          "change_pct": 8.42
+        }
+      ],
+      "insights_total_sek": 573,
+      "best": [
+        {
+          "name": "Sample Index Fund",
+          "isin": null,
+          "instrument_type": "FUND",
+          "outcome_sek": 932,
+          "outcome_pct": 8.24,
+          "dividends_sek": 4
+        },
+        {
+          "name": "Sample Industrial B",
+          "isin": null,
+          "instrument_type": "STOCK",
+          "outcome_sek": 539,
+          "outcome_pct": 6.75,
+          "dividends_sek": 1
+        },
+        {
+          "name": "Sample Software Co",
+          "isin": null,
+          "instrument_type": "STOCK",
+          "outcome_sek": 230,
+          "outcome_pct": 5,
+          "dividends_sek": 1
+        }
+      ],
+      "worst": [
+        {
+          "name": "Sample Semiconductor A",
+          "isin": null,
+          "instrument_type": "STOCK",
+          "outcome_sek": -220,
+          "outcome_pct": -4.99,
+          "dividends_sek": 3
+        },
+        {
+          "name": "Sample Auto B",
+          "isin": null,
+          "instrument_type": "STOCK",
+          "outcome_sek": -37,
+          "outcome_pct": -6.27,
+          "dividends_sek": 6
+        }
+      ]
+    },
+    "1m": {
+      "per_account": [
+        {
+          "account": "Account B",
+          "change": 176,
+          "change_pct": 6.94
+        },
+        {
+          "account": "Account A",
+          "change": 133,
+          "change_pct": 3.6
+        }
+      ],
+      "insights_total_sek": null,
+      "best": null,
+      "worst": null
+    },
+    "ytd": {
+      "per_account": [
+        {
+          "account": "Account B",
+          "change": 8989,
+          "change_pct": 4.67
+        },
+        {
+          "account": "Account A",
+          "change": 890,
+          "change_pct": 42
+        }
+      ],
+      "insights_total_sek": 6109,
+      "best": null,
+      "worst": null
+    }
+  },
+  "concentration": {
+    "top1_pct_of_invested": 60.9,
+    "top3_pct_of_invested": 60.3,
+    "by_instrument_type_pct": {
+      "STOCK": 13.88,
+      "FUND": 59.71
+    },
+    "by_currency_pct": {
+      "SEK": 21.23,
+      "USD": 11.31,
+      "EUR": 14.86
+    }
+  },
+  "holdings": [
+    {
+      "name": "Sample Index Fund",
+      "ticker": null,
+      "type": "FUND",
+      "currency": "SEK",
+      "account": "Account B",
+      "value_sek": 32396,
+      "weight_of_portfolio_pct": 26.89,
+      "weight_of_invested_pct": 63.91,
+      "pnl_sek": 575,
+      "pnl_pct": 3.93,
+      "day_change_pct": 3.32
+    },
+    {
+      "name": "Sample Software Co",
+      "ticker": "SMP8",
+      "type": "STOCK",
+      "currency": "USD",
+      "account": "Account A",
+      "value_sek": 9880,
+      "weight_of_portfolio_pct": 93.81,
+      "weight_of_invested_pct": 38.32,
+      "pnl_sek": 204,
+      "pnl_pct": 54.41,
+      "day_change_pct": 8.74
+    },
+    {
+      "name": "Sample Semiconductor A",
+      "ticker": "SMP1.AS",
+      "type": "STOCK",
+      "currency": "EUR",
+      "account": "Account B",
+      "value_sek": 1373,
+      "weight_of_portfolio_pct": 69.42,
+      "weight_of_invested_pct": 65.09,
+      "pnl_sek": -620,
+      "pnl_pct": -5.46,
+      "day_change_pct": -8.97
+    },
+    {
+      "name": "Sample Industrial B",
+      "ticker": "SMP7.ST",
+      "type": "STOCK",
+      "currency": "SEK",
+      "account": "Account B",
+      "value_sek": 6707,
+      "weight_of_portfolio_pct": 42.55,
+      "weight_of_invested_pct": 96.17,
+      "pnl_sek": 496,
+      "pnl_pct": 7.11,
+      "day_change_pct": 4.53
+    },
+    {
+      "name": "Sample Bond Fund",
+      "ticker": null,
+      "type": "FUND",
+      "currency": "SEK",
+      "account": "Account B",
+      "value_sek": 6118,
+      "weight_of_portfolio_pct": 4.15,
+      "weight_of_invested_pct": 80.73,
+      "pnl_sek": 69,
+      "pnl_pct": 8.76,
+      "day_change_pct": 2
+    },
+    {
+      "name": "Sample EM Fund",
+      "ticker": null,
+      "type": "FUND",
+      "currency": "SEK",
+      "account": "Account B",
+      "value_sek": 8255,
+      "weight_of_portfolio_pct": 7.85,
+      "weight_of_invested_pct": 7.66,
+      "pnl_sek": 100,
+      "pnl_pct": 1.32,
+      "day_change_pct": 1.02
+    },
+    {
+      "name": "Sample Auto B",
+      "ticker": "SMP12.ST",
+      "type": "STOCK",
+      "currency": "SEK",
+      "account": "Account B",
+      "value_sek": 5328,
+      "weight_of_portfolio_pct": 2.7,
+      "weight_of_invested_pct": 2.32,
+      "pnl_sek": -87,
+      "pnl_pct": -4.19,
+      "day_change_pct": -8
+    },
+    {
+      "name": "Sample Tech A",
+      "ticker": "SMP5",
+      "type": "STOCK",
+      "currency": "USD",
+      "account": "Account A",
+      "value_sek": 1046,
+      "weight_of_portfolio_pct": 9.7,
+      "weight_of_invested_pct": 3.89,
+      "pnl_sek": 641,
+      "pnl_pct": 11.72,
+      "day_change_pct": 6.33
+    }
+  ],
+  "flags": {
+    "day_move_over_3pct": [
+      {
+        "name": "Sample Semiconductor A",
+        "ticker": "SMP1.AS",
+        "type": "STOCK",
+        "currency": "EUR",
+        "account": "Account B",
+        "value_sek": 1705,
+        "weight_of_portfolio_pct": 94.67,
+        "weight_of_invested_pct": 45.63,
+        "pnl_sek": -767,
+        "pnl_pct": -5.25,
+        "day_change_pct": -2.45
+      }
+    ],
+    "unrealized_loss_beyond_-10pct": [],
+    "stale_price_over_3d": []
+  },
+  "earnings": {
+    "within_days": 12,
+    "upcoming": [
+      {
+        "ticker": "SMP8",
+        "date": "2026-10-22",
+        "days_until": 72
+      },
+      {
+        "ticker": "SMP5",
+        "date": "2026-10-23",
+        "days_until": 86
+      }
+    ],
+    "checked": [
+      "SMP1.AS",
+      "SMP5",
+      "SMP7.ST",
+      "SMP8",
+      "SMP12.ST"
+    ],
+    "lookup_failed": [
+      "SMP7.ST"
+    ],
+    "not_applicable": [
+      "Sample Index Fund",
+      "Sample Bond Fund",
+      "Sample EM Fund"
+    ],
+    "unmapped_stocks": []
+  },
+  "news_targets": {
+    "stock_tickers": [
+      "SMP1.AS",
+      "SMP5",
+      "SMP7.ST",
+      "SMP8",
+      "SMP12.ST"
+    ],
+    "other_mapped": []
+  }
+}

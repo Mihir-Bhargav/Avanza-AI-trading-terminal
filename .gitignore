@@ -1,0 +1,15 @@
+# Secrets and personal data -- never commit (repo is intended to be public)
+.env
+.env.*
+!.env.example
+alerts_config.json
+portfolio_mcp/ticker_map.json
+
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+
+# Personal AI profile and local runtime data (plans, API caches)
+profile.local.md
+data/

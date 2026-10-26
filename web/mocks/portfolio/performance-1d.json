@@ -1,0 +1,58 @@
+{
+  "period": "1d",
+  "per_account": [],
+  "source": {
+    "per_account": null,
+    "positions": "insights.mock"
+  },
+  "note": "1d has no per-account figure in the overview; see insights below",
+  "insights": {
+    "total_outcome_sek": 38,
+    "price_development_sek": 26,
+    "dividends_sek": 6,
+    "best": [
+      {
+        "name": "Sample Industrial B",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": 819,
+        "outcome_pct": 0.78,
+        "dividends_sek": 8
+      },
+      {
+        "name": "Sample Software Co",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": 88,
+        "outcome_pct": 8.19,
+        "dividends_sek": 7
+      },
+      {
+        "name": "Sample Index Fund",
+        "isin": null,
+        "instrument_type": "FUND",
+        "outcome_sek": 99,
+        "outcome_pct": 2.34,
+        "dividends_sek": 1
+      }
+    ],
+    "worst": [
+      {
+        "name": "Sample Semiconductor A",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": -636,
+        "outcome_pct": -3.16,
+        "dividends_sek": 5
+      },
+      {
+        "name": "Sample Auto B",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": -11,
+        "outcome_pct": -6,
+        "dividends_sek": 5
+      }
+    ]
+  }
+}

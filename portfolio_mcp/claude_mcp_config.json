@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "avanza-portfolio": {
+      "command": "uv",
+      "args": [
+        "--directory", "/path/to/trading-terminal",
+        "run", "--python", "3.13",
+        "--with", "mcp<2", "--with", "pandas", "--with", "certifi", "--with", "yfinance",
+        "python", "-m", "portfolio_mcp.server"
+      ]
+    },
+    "avanza-market": {
+      "command": "uvx",
+      "args": ["avanza-mcp==2.1.0"]
+    },
+    "yahoo-finance": {
+      "command": "uvx",
+      "args": [
+        "--from", "git+https://github.com/Alex2Yang97/yahoo-finance-mcp@b9c176547d3797b2196adeba0210ae67861ac589",
+        "yahoo-finance-mcp"
+      ]
+    },
+    "efn-news": {
+      "command": "uvx",
+      "args": ["efn-mcp==0.1.0"]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "period": "3m",
+  "per_account": [
+    {
+      "account": "Account B",
+      "name": "Account B",
+      "type": null,
+      "change": 7431,
+      "change_unit": "SEK",
+      "change_pct": 4.17
+    },
+    {
+      "account": "Account A",
+      "name": "Account A",
+      "type": null,
+      "change": 793,
+      "change_unit": "SEK",
+      "change_pct": 7.33
+    }
+  ],
+  "source": {
+    "per_account": "overview.mock",
+    "positions": null
+  },
+  "insights": null,
+  "insights_note": "Avanza's insights report only supports 1d, 1w, ytd and 3y; per-position breakdown unavailable for this period"
+}

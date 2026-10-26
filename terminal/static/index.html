@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Terminal</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>"/>
+<link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="brand">TERMINAL</div>
+  <span id="live" class="live off">OFFLINE</span>
+  <div id="markets" class="markets"></div>
+  <div class="spacer"></div>
+  <div id="clock" class="clock"></div>
+</header>
+
+<main>
+  <section id="left">
+    <div class="panel-head">
+      <span>WATCHLIST</span>
+      <span id="wl-meta" class="meta"></span>
+    </div>
+    <div class="table-wrap">
+      <table id="wl">
+        <thead>
+          <tr>
+            <th>SYM</th><th class="r">LAST</th><th class="r">CHG%</th>
+            <th class="r c-x">SCORE</th><th class="r c-x">CPR</th>
+            <th class="r c-x">→PDH</th><th class="r c-x">→PDL</th>
+            <th class="r c-x">ATR%</th><th class="r c-x">LEV</th><th class="c-x">DATA</th>
+          </tr>
+        </thead>
+        <tbody id="wl-body"><tr><td colspan="10" class="loading">loading…</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- draggable: the watchlist/chart split is a preference, not a constant -->
+  <div id="vsplit" class="split-v" title="drag to resize"></div>
+
+  <section id="right">
+    <div class="panel-head">
+      <span id="chart-sym">—</span>
+      <span id="chart-meta" class="meta"></span>
+      <span class="spacer"></span>
+      <span id="draw" class="tf">
+        <button data-t="none" class="on">✛</button>
+        <button data-t="trend">╱</button>
+        <button data-t="hline">─</button>
+        <button data-t="rect">▭</button>
+        <button data-t="clear">✕</button>
+      </span>
+      <span id="layout" class="tf">
+        <button data-n="1" class="on">1</button>
+        <button data-n="2">2</button>
+        <button data-n="4">4</button>
+      </span>
+      <button id="arm" class="armbtn">ARM ALERTS</button>
+      <span id="tf" class="tf">
+        <button data-i="1d" data-l="6mo" class="on">1D</button>
+        <button data-i="1h" data-l="1mo">1H</button>
+        <button data-i="15m" data-l="5d">15M</button>
+        <button data-i="5m" data-l="5d">5M</button>
+        <button data-i="1m" data-l="1d">1M</button>
+      </span>
+    </div>
+    <div id="indbar" class="indbar"></div>
+    <div id="grid" class="grid g1"></div>
+    <div id="levels" class="levels"></div>
+
+    <div id="hsplit" class="split-h" title="drag to resize"></div>
+
+    <div id="dock" class="dock">
+      <div class="panel-head tabs">
+        <button data-tab="strat" class="on">STRATEGIES</button>
+        <button data-tab="av">AVANZA</button>
+        <button data-tab="ai">ASK AI</button>
+        <button data-tab="news">NEWS</button>
+        <span id="tab-meta" class="meta"></span>
+      </div>
+
+      <div id="tab-strat" class="tabpane on">
+        <div id="strat" class="stratwrap"></div>
+      </div>
+
+      <div id="tab-av" class="tabpane">
+        <div class="avbar">
+          <input id="avq" placeholder="MINI L SP500 / BULL GULD / MINI S OMX / MINI L DAX" />
+          <span id="av-meta" class="meta"></span>
+        </div>
+        <div id="av-detail" class="avdetail"></div>
+        <div id="av" class="avwrap"></div>
+      </div>
+
+      <div id="tab-ai" class="tabpane">
+        <div class="aibar">
+          <input id="aiq" placeholder="Ask about what is on screen — levels, strategies, freshness…" />
+          <button id="aisend">ASK</button>
+          <span id="ai-meta" class="meta"></span>
+        </div>
+        <div id="ai-out" class="aiout"><span class="dim">Answers come only from the data the terminal
+          computed — levels, strategies, quotes and their freshness. Anything not in that context is
+          answered "not in the data I have" rather than guessed.</span></div>
+      </div>
+
+      <div id="tab-news" class="tabpane">
+        <div class="avbar">
+          <button id="news-mkt" class="newsbtn on">MARKET WIRE</button>
+          <button id="news-sym" class="newsbtn">THIS TICKER</button>
+          <button id="news-bot" class="newsbtn hot">RUN BOT — WHY DID IT MOVE?</button>
+          <label class="dim" style="margin-left:auto">
+            <input type="checkbox" id="news-auto" checked/> auto-refresh
+          </label>
+          <span id="news-meta" class="meta"></span>
+        </div>
+        <div id="news" class="newswrap"><span class="dim">loading wire…</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="/static/lightweight-charts.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

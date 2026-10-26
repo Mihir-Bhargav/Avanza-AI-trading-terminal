@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/*
+ * Range design tokens (System.dc.html). The product is dark-only by design;
+ * the landing page adds two ivory sections (--ivory / --ink).
+ *
+ * Use through Tailwind: bg-ground, bg-surface, border-line, text-muted,
+ * text-up, bg-up/12 (tint), font-serif, font-mono, etc.
+ */
+:root {
+  --ground: #0b0d10;
+  --rail: #0e1115;
+  --surface: #12151a;
+  --raised: #1a1f26; /* row dividers, neutral chips, hover */
+  --line: #1f242c;
+  --line-2: #242a33; /* inputs, fieldsets */
+  --line-3: #2b323c; /* outline buttons, kbd */
+  --seg-on: #232a33; /* selected segment */
+  --kes-surface: #151a21;
+  --kes-line: #262d37;
+  --bubble: #1a2029;
+  --text: #f3f4f6;
+  --text-2: #e6e9ed;
+  --soft: #c9d1da;
+  --muted: #aeb6c0;
+  --placeholder: #8a939e;
+  --faint: #7d8793;
+  --amber: #f5a623;
+  --amber-hover: #ffc15e;
+  --on-amber: #1a1204;
+  --zone: #5aa9ff;
+  --zone-text: #8cc4ff;
+  --up: #3dd68c;
+  --down: #ff6a5e;
+  --down-soft: #ff8a80; /* stale badge, earnings-soon */
+  --warn-text: #ffb3ac;
+  --ivory: #f4f1ea;
+  --ivory-line: #e3ded3;
+  --ink: #121417;
+  --ink-2: #4a515c;
+  --ochre: #9a5b12; /* eyebrow text on ivory */
+  --focus: var(--amber);
+}
+
+/* Colour-safe mode: green/red become blue/orange (signs stay on every number). */
+:root[data-colorsafe="true"] {
+  --up: #5aa9ff;
+  --down: #ff8a3d;
+  --down-soft: #ffa66b;
+  --warn-text: #ffc59a;
+}
+
+@theme inline {
+  --color-ground: var(--ground);
+  --color-rail: var(--rail);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-line-3: var(--line-3);
+  --color-seg-on: var(--seg-on);
+  --color-kes-surface: var(--kes-surface);
+  --color-kes-line: var(--kes-line);
+  --color-bubble: var(--bubble);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-placeholder: var(--placeholder);
+  --color-faint: var(--faint);
+  --color-amber: var(--amber);
+  --color-amber-hover: var(--amber-hover);
+  --color-on-amber: var(--on-amber);
+  --color-zone: var(--zone);
+  --color-zone-text: var(--zone-text);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-down-soft: var(--down-soft);
+  --color-warn-text: var(--warn-text);
+  --color-ivory: var(--ivory);
+  --color-ivory-line: var(--ivory-line);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ochre: var(--ochre);
+
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+
+  /* Radii: chips 6, controls 8-10, panels 14, landing cards 22, pills full. */
+  --radius-chip: 6px;
+  --radius-control: 10px;
+  --radius-panel: 14px;
+  --radius-card: 22px;
+}
+
+html {
+  background: var(--ground);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--ground);
+  color: var(--text-2);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Every number: mono + tabular figures. */
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.on-ivory {
+  --focus: var(--ochre);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgb(245 166 35 / 0.35);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder);
+}

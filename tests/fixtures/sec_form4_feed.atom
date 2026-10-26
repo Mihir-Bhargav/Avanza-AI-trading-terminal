@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Latest Filings - Thu, 24 Sep 2026 11:23:04 EDT</title>
+<link rel="alternate" href="/cgi-bin/browse-edgar?action=getcurrent"/>
+<id>https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent</id>
+<author><name>Webmaster</name><email>webmaster@sec.gov</email></author>
+<updated>2026-09-24T11:23:04-04:00</updated>
+<entry>
+<title>4 - DOE JANE Q (0009000001) (Reporting)</title>
+<link rel="alternate" type="text/html" href="https://www.sec.gov/Archives/edgar/data/9000001/000900000226000123/0009000002-26-000123-index.htm"/>
+<summary type="html"> &lt;b&gt;Filed:&lt;/b&gt; 2026-09-24 &lt;b&gt;AccNo:&lt;/b&gt; 0009000002-26-000123 &lt;b&gt;Size:&lt;/b&gt; 9 KB</summary>
+<updated>2026-09-24T10:57:28-04:00</updated>
+<category scheme="https://www.sec.gov/" label="form type" term="4"/>
+<id>urn:tag:sec.gov,2008:accession-number=0009000002-26-000123</id>
+</entry>
+<entry>
+<title>4 - EXAMPLE ROBOTICS INC (0009000002) (Issuer)</title>
+<link rel="alternate" type="text/html" href="https://www.sec.gov/Archives/edgar/data/9000002/000900000226000123/0009000002-26-000123-index.htm"/>
+<summary type="html"> &lt;b&gt;Filed:&lt;/b&gt; 2026-09-24 &lt;b&gt;AccNo:&lt;/b&gt; 0009000002-26-000123 &lt;b&gt;Size:&lt;/b&gt; 9 KB</summary>
+<updated>2026-09-24T10:57:28-04:00</updated>
+<category scheme="https://www.sec.gov/" label="form type" term="4"/>
+<id>urn:tag:sec.gov,2008:accession-number=0009000002-26-000123</id>
+</entry>
+<entry>
+<title>4/A - SAMPLE BANCORP (0009000003) (Issuer)</title>
+<link rel="alternate" type="text/html" href="https://www.sec.gov/Archives/edgar/data/9000003/000900000326000045/0009000003-26-000045-index.htm"/>
+<summary type="html"> &lt;b&gt;Filed:&lt;/b&gt; 2026-09-24 &lt;b&gt;AccNo:&lt;/b&gt; 0009000003-26-000045 &lt;b&gt;Size:&lt;/b&gt; 5 KB</summary>
+<updated>2026-09-24T09:12:00-04:00</updated>
+<category scheme="https://www.sec.gov/" label="form type" term="4/A"/>
+<id>urn:tag:sec.gov,2008:accession-number=0009000003-26-000045</id>
+</entry>
+<entry>
+<title>424B2 - SOME BANK (0009000004) (Filer)</title>
+<link rel="alternate" type="text/html" href="https://www.sec.gov/Archives/edgar/data/9000004/000900000426000001/0009000004-26-000001-index.htm"/>
+<summary type="html"> &lt;b&gt;Filed:&lt;/b&gt; 2026-09-24</summary>
+<updated>2026-09-24T09:00:00-04:00</updated>
+<category scheme="https://www.sec.gov/" label="form type" term="424B2"/>
+<id>urn:tag:sec.gov,2008:accession-number=0009000004-26-000001</id>
+</entry>
+</feed>

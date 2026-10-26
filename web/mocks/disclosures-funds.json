@@ -1,0 +1,97 @@
+{
+  "type": "funds",
+  "configured": true,
+  "rule": "13F · quarterly, up to 45 days after quarter end",
+  "as_of": "2026-09-24T11:32:01+00:00",
+  "source": "MOCK DATA (synthetic) · shaped like Alpha Vantage INSTITUTIONAL_HOLDINGS",
+  "partial": true,
+  "skipped": [
+    "TSLA",
+    "QCOM"
+  ],
+  "skipped_reasons": {
+    "TSLA": "live-fetch cap reached for this request",
+    "QCOM": "live-fetch cap reached for this request"
+  },
+  "symbols": [
+    "AAPL",
+    "AMD",
+    "ASML",
+    "AVGO",
+    "GOOGL",
+    "MSFT",
+    "MU",
+    "NVDA",
+    "TSM"
+  ],
+  "window_days": 180,
+  "live_fetches": 0,
+  "holdings_note": "portfolio session not authenticated; HELD is not marked",
+  "rows": [
+    {
+      "filed": null,
+      "traded": "2026-06-30",
+      "lag_days": null,
+      "who": "Fund A",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "13F filer",
+      "symbol": "NVDA",
+      "side": "buy",
+      "amount_min": null,
+      "amount_max": null,
+      "amount_label": "+12% shares",
+      "yours": "WATCH"
+    },
+    {
+      "filed": null,
+      "traded": "2026-06-30",
+      "lag_days": null,
+      "who": "Fund B",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "13F filer",
+      "symbol": "MU",
+      "side": "buy",
+      "amount_min": null,
+      "amount_max": null,
+      "amount_label": "+310 000 sh",
+      "yours": "WATCH"
+    },
+    {
+      "filed": null,
+      "traded": "2026-06-30",
+      "lag_days": null,
+      "who": "Fund C",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "13F filer",
+      "symbol": "AAPL",
+      "side": "sell",
+      "amount_min": null,
+      "amount_max": null,
+      "amount_label": "−100%",
+      "yours": "WATCH"
+    },
+    {
+      "filed": null,
+      "traded": "2026-06-30",
+      "lag_days": null,
+      "who": "Fund D",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "13F filer",
+      "symbol": "MSFT",
+      "side": "sell",
+      "amount_min": null,
+      "amount_max": null,
+      "amount_label": "−8% shares",
+      "yours": "HELD"
+    }
+  ],
+  "most_bought": []
+}

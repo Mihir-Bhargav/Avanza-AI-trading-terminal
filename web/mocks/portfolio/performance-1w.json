@@ -1,0 +1,74 @@
+{
+  "period": "1w",
+  "per_account": [
+    {
+      "account": "Account B",
+      "name": "Account B",
+      "type": null,
+      "change": 815,
+      "change_unit": "SEK",
+      "change_pct": 1.96
+    },
+    {
+      "account": "Account A",
+      "name": "Account A",
+      "type": null,
+      "change": 895,
+      "change_unit": "SEK",
+      "change_pct": 3.2
+    }
+  ],
+  "source": {
+    "per_account": "overview.mock",
+    "positions": "insights.mock"
+  },
+  "insights": {
+    "total_outcome_sek": 145,
+    "price_development_sek": 720,
+    "dividends_sek": 1,
+    "best": [
+      {
+        "name": "Sample Index Fund",
+        "isin": null,
+        "instrument_type": "FUND",
+        "outcome_sek": 605,
+        "outcome_pct": 8.86,
+        "dividends_sek": 1
+      },
+      {
+        "name": "Sample Industrial B",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": 384,
+        "outcome_pct": 4.52,
+        "dividends_sek": 2
+      },
+      {
+        "name": "Sample Software Co",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": 165,
+        "outcome_pct": 8,
+        "dividends_sek": 9
+      }
+    ],
+    "worst": [
+      {
+        "name": "Sample Semiconductor A",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": -707,
+        "outcome_pct": -5.86,
+        "dividends_sek": 8
+      },
+      {
+        "name": "Sample Auto B",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": -68,
+        "outcome_pct": -4.23,
+        "dividends_sek": 9
+      }
+    ]
+  }
+}

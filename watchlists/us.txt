@@ -1,0 +1,58 @@
+# US WATCHLIST — every symbol validated against yfinance 2026-08-03.
+# Weighted to your stated sectors: banks, semiconductors, tech, pharma + giants.
+# One ticker per line; text after # is ignored.
+
+# --- Index / sector ETFs (the read before the names) ---
+SPY
+QQQ
+SMH                   # semis — sector tell for the whole complex
+XLF                   # financials
+XLV                   # healthcare/pharma
+
+# --- Banks / financials ---
+JPM
+BAC
+GS
+MS
+C
+WFC
+SCHW
+
+# --- Semiconductors ---
+NVDA
+AMD
+AVGO
+MU                    # memory/HBM — highest ATR in the group (~11%)
+TSM
+INTC
+QCOM
+TXN
+MRVL
+ARM
+LRCX                  # semicap
+AMAT                  # semicap
+KLAC                  # semicap
+SMCI                  # AI server, very high beta
+
+# --- Big tech / giants ---
+AAPL
+MSFT
+GOOGL
+AMZN
+META
+NFLX
+ORCL
+CRM
+PLTR
+BABA                  # your existing name — US-listed ADR
+
+# --- Pharma / healthcare ---
+LLY
+JNJ
+PFE
+MRK
+ABBV
+BMY
+AMGN
+GILD
+NVO

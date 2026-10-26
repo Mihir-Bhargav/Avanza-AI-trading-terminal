@@ -1,0 +1,258 @@
+:root{
+  --bg:#0b0e11; --panel:#12161b; --line:#1e242c; --txt:#d6dde6; --dim:#7b8794;
+  --up:#26a69a; --dn:#ef5350; --acc:#f0a020; --sel:#1b2530;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:var(--bg); color:var(--txt);
+  font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  display:flex; flex-direction:column; overflow:hidden;
+}
+header{
+  display:flex; align-items:center; gap:16px;
+  padding:8px 14px; background:var(--panel); border-bottom:1px solid var(--line);
+}
+.brand{font-weight:700; letter-spacing:.22em; color:var(--acc)}
+.spacer{flex:1}
+.clock{color:var(--dim); font-variant-numeric:tabular-nums}
+.markets{display:flex; gap:4px}
+.markets button{
+  background:transparent; border:1px solid var(--line); color:var(--dim);
+  padding:3px 10px; cursor:pointer; text-transform:uppercase;
+  letter-spacing:.08em; font:inherit; border-radius:2px;
+}
+.markets button:hover{color:var(--txt); border-color:#2c3540}
+.markets button.on{color:#0b0e11; background:var(--acc); border-color:var(--acc)}
+
+main{flex:1; display:flex; min-height:0}
+/* width is set by the drag handle and restored from localStorage */
+#left{width:52%; min-width:150px; display:flex; flex-direction:column}
+#right{flex:1; display:flex; flex-direction:column; min-width:0}
+
+/* --- splitters: the panel split is a preference, not a constant --- */
+.split-v{
+  flex:0 0 5px; cursor:col-resize; background:var(--line);
+  transition:background .12s;
+}
+.split-h{
+  flex:0 0 5px; cursor:row-resize; background:var(--line);
+  transition:background .12s;
+}
+.split-v:hover,.split-h:hover,.split-v.drag,.split-h.drag{background:var(--acc)}
+body.resizing{cursor:col-resize; user-select:none}
+body.resizing-v{cursor:row-resize; user-select:none}
+body.resizing iframe,body.resizing canvas{pointer-events:none}
+
+/* --- compact watchlist: below ~430px only SYM / LAST / CHG% survive, so a
+       narrow pane still tells you what moved instead of clipping mid-number --- */
+#left.compact .c-x{display:none}
+#left.compact td.sym{font-size:11px}
+#left.compact tbody td{padding:5px 6px}
+
+.panel-head{
+  display:flex; align-items:center; gap:10px;
+  padding:6px 12px; background:var(--panel); border-bottom:1px solid var(--line);
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim);
+}
+.panel-head .meta{text-transform:none; letter-spacing:0; color:var(--dim)}
+
+.table-wrap{flex:1; overflow:auto}
+table{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums}
+thead th{
+  position:sticky; top:0; background:var(--panel); color:var(--dim);
+  font-weight:500; font-size:10px; letter-spacing:.1em; text-align:left;
+  padding:6px 8px; border-bottom:1px solid var(--line); z-index:2;
+}
+th.r,td.r{text-align:right}
+tbody tr{border-bottom:1px solid #151a20; cursor:pointer}
+tbody tr:hover{background:#151b22}
+tbody tr.sel{background:var(--sel)}
+tbody td{padding:5px 8px; white-space:nowrap}
+td.sym{font-weight:600}
+.up{color:var(--up)} .dn{color:var(--dn)} .dim{color:var(--dim)}
+.loading{color:var(--dim); text-align:center; padding:24px}
+
+/* freshness badges — the whole point of the design */
+.b{font-size:9px; padding:1px 5px; border-radius:2px; letter-spacing:.06em; text-transform:uppercase}
+.b-realtime{background:#0e3b33; color:#4fd6c0}
+.b-delayed {background:#3d3410; color:#e3b341}
+.b-closed  {background:#22272e; color:#8b949e}
+.b-stale   {background:#4a1512; color:#ff7b72; font-weight:700}
+.b-unknown {background:#22272e; color:#8b949e}
+
+.coil{color:var(--acc); font-weight:600}
+
+#chart{flex:1; min-height:0}
+.levels{
+  display:flex; flex-wrap:wrap; gap:6px; padding:7px 12px;
+  background:var(--panel); border-top:1px solid var(--line);
+}
+.lv{font-size:10px; padding:2px 7px; border:1px solid var(--line); border-radius:2px}
+.lv b{color:var(--dim); font-weight:500; margin-right:5px}
+
+.tf{display:flex; gap:3px}
+.tf button{
+  background:transparent; border:1px solid var(--line); color:var(--dim);
+  padding:2px 8px; cursor:pointer; font:inherit; font-size:10px; border-radius:2px;
+}
+.tf button.on{color:#0b0e11; background:var(--dim); border-color:var(--dim)}
+
+.warn{color:#ff7b72; font-weight:700}
+
+/* --- phase 2 --- */
+.live{font-size:9px; padding:2px 7px; border-radius:2px; letter-spacing:.1em}
+.live.on{background:#0e3b33; color:#4fd6c0}
+.live.off{background:#4a1512; color:#ff7b72}
+.armbtn{
+  background:transparent; border:1px solid var(--acc); color:var(--acc);
+  padding:2px 9px; cursor:pointer; font:inherit; font-size:10px;
+  letter-spacing:.08em; border-radius:2px;
+}
+.armbtn.on{background:var(--acc); color:#0b0e11}
+#avq{
+  background:#0b0e11; border:1px solid var(--line); color:var(--txt);
+  padding:3px 8px; font:inherit; font-size:11px; width:280px; border-radius:2px;
+}
+.avwrap table{width:100%; border-collapse:collapse}
+.avwrap td{padding:4px 8px; border-bottom:1px solid #151a20; white-space:nowrap}
+.tight{color:var(--up); font-weight:600}
+.wide{color:var(--dn)}
+tr.flash{animation:fl .6s}
+@keyframes fl{from{background:#2a3a2f}to{background:transparent}}
+
+/* --- indicators: no cap, that limit is TradingView's business model --- */
+.indbar{
+  display:flex; flex-wrap:wrap; gap:4px; padding:6px 12px;
+  background:var(--panel); border-bottom:1px solid var(--line);
+}
+.indbar button{
+  background:transparent; border:1px solid var(--line); color:var(--dim);
+  padding:2px 8px; cursor:pointer; font:inherit; font-size:10px; border-radius:2px;
+}
+.indbar button:hover{color:var(--txt)}
+.indbar button.on{background:#1b2530; color:var(--acc); border-color:var(--acc)}
+.indbar .cnt{margin-left:auto; color:var(--dim); font-size:10px; align-self:center}
+#chart{flex:1; min-height:180px}
+#panes{display:flex; flex-direction:column}
+.pane{border-top:1px solid var(--line); position:relative}
+.pane .lbl{
+  position:absolute; top:3px; left:8px; z-index:3;
+  font-size:9px; letter-spacing:.1em; color:var(--dim); pointer-events:none;
+}
+
+#chartwrap{flex:1; position:relative; min-height:180px}
+#chart{position:absolute; inset:0}
+#draw-cv{position:absolute; inset:0; pointer-events:none; z-index:4}
+#draw-cv.armed{pointer-events:auto; cursor:crosshair}
+.stratwrap table{width:100%; border-collapse:collapse}
+.stratwrap td{padding:4px 8px; border-bottom:1px solid #151a20; white-space:nowrap}
+tr.fired{background:#12211b}
+tr.fired td:first-child{color:var(--acc); font-weight:700}
+.side-BUY{color:var(--up); font-weight:600}
+.side-SELL{color:var(--dn); font-weight:600}
+.side-STRADDLE,.side-WATCH{color:var(--acc); font-weight:600}
+.side-NEUTRAL,.side-ERROR{color:var(--dim)}
+
+/* --- bottom dock: tabbed, so strategies/avanza/AI share one height budget
+       instead of each stealing a fixed slice of the chart --- */
+.dock{display:flex; flex-direction:column; min-height:0; height:240px}
+.panel-head.tabs{gap:2px; padding:0 8px}
+.panel-head.tabs button{
+  background:transparent; border:none; border-bottom:2px solid transparent;
+  color:var(--dim); padding:7px 12px; cursor:pointer; font:inherit;
+  font-size:10px; letter-spacing:.14em; text-transform:uppercase;
+}
+.panel-head.tabs button:hover{color:var(--txt)}
+.panel-head.tabs button.on{color:var(--acc); border-bottom-color:var(--acc)}
+.tabpane{display:none; flex:1; min-height:0; flex-direction:column}
+.tabpane.on{display:flex}
+.stratwrap,.avwrap{flex:1; overflow-y:auto; background:var(--bg); max-height:none; min-height:0}
+/* Every dock pane scrolls its own body. Without min-height:0 a flex child
+   refuses to shrink below its content and the overflow never engages. */
+.newswrap,.aiout{min-height:0}
+.tabpane > *{min-width:0}
+.avwrap tr:hover{background:#1b2530}
+.avwrap td:first-child{max-width:none}
+
+.avbar,.aibar{display:flex; align-items:center; gap:8px; padding:6px 10px;
+              background:var(--panel); border-bottom:1px solid var(--line)}
+#avq,#aiq{
+  background:#0b0e11; border:1px solid var(--line); color:var(--txt);
+  padding:4px 8px; font:inherit; font-size:11px; border-radius:2px;
+}
+#avq{width:320px} #aiq{flex:1}
+#aisend{
+  background:transparent; border:1px solid var(--acc); color:var(--acc);
+  padding:4px 12px; cursor:pointer; font:inherit; font-size:10px;
+  letter-spacing:.1em; border-radius:2px;
+}
+#aisend:hover{background:var(--acc); color:#0b0e11}
+#aisend:disabled{opacity:.4; cursor:default}
+.aiout{flex:1; overflow:auto; padding:10px 12px; white-space:pre-wrap;
+       line-height:1.6; font-size:11.5px}
+.aiout h3{font-size:11px; letter-spacing:.1em; color:var(--acc); margin:10px 0 4px}
+.aiout strong{color:#fff}
+.aiout table{margin:6px 0; font-size:11px}
+.aiout td,.aiout th{padding:2px 10px 2px 0; text-align:left; border:0}
+
+/* avanza instrument detail — barrier is the number that decides the position */
+/* Fixed, compact, and capped. The detail strip must never be able to grow
+   until it squeezes the instrument list out of the pane -- that is what
+   happened, and there was no scrollbar to recover with. */
+.avdetail{padding:0; background:var(--panel); flex:0 0 auto;
+          max-height:74px; overflow-y:auto; line-height:1.7}
+.avdetail.on{padding:6px 12px; border-bottom:1px solid var(--line)}
+.avdetail .nm{color:var(--txt); font-weight:700; margin-right:10px}
+.avdetail .kv{display:inline-block; margin-right:14px; color:var(--dim)}
+.avdetail .kv b{color:var(--txt); font-weight:600; margin-left:5px}
+.avdetail .danger b{color:var(--dn)}
+.avdetail .ok b{color:var(--up)}
+.avwrap tr.selav{background:var(--sel)}
+.avwrap tr{cursor:pointer}
+
+/* --- multi-chart grid --- */
+.grid{flex:1; display:grid; gap:1px; background:var(--line); min-height:200px}
+.grid.g1{grid-template-columns:1fr; grid-template-rows:1fr}
+.grid.g2{grid-template-columns:1fr 1fr; grid-template-rows:1fr}
+.grid.g4{grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr}
+.cpanel{display:flex; flex-direction:column; background:var(--bg); min-width:0; min-height:0; position:relative}
+.cpanel.focus{outline:1px solid var(--acc); outline-offset:-1px}
+.cphead{display:flex; align-items:center; gap:8px; padding:3px 8px;
+        background:var(--panel); border-bottom:1px solid var(--line); font-size:10px}
+.cpsym{font-weight:700; color:var(--txt)}
+.cpidx{color:var(--dim); font-size:9px}
+.cpchart{flex:1; position:relative; min-height:0}
+.cpchart canvas.cpdraw{position:absolute; inset:0; pointer-events:none; z-index:4}
+.cpchart canvas.cpdraw.armed{pointer-events:auto; cursor:crosshair}
+.cppanes{display:flex; flex-direction:column}
+
+/* --- news ------------------------------------------------------------- */
+.newswrap{flex:1; overflow:auto; background:var(--bg); padding:2px 0}
+.newsbtn{
+  background:transparent; border:1px solid var(--line); color:var(--dim);
+  padding:3px 10px; cursor:pointer; font:inherit; font-size:10px;
+  letter-spacing:.08em; border-radius:2px;
+}
+.newsbtn:hover{color:var(--txt)}
+.newsbtn.on{background:#1b2530; color:var(--acc); border-color:var(--acc)}
+.newsbtn.hot{border-color:var(--acc); color:var(--acc)}
+.newsbtn.hot:hover{background:var(--acc); color:#0b0e11}
+.newsbtn:disabled{opacity:.45; cursor:default}
+.nrow{display:flex; gap:9px; align-items:baseline; padding:5px 12px;
+      border-bottom:1px solid #151a20}
+.nrow:hover{background:#151b22}
+.nage{color:var(--dim); font-size:10px; min-width:52px; text-align:right;
+      font-variant-numeric:tabular-nums}
+.nage.fresh{color:var(--acc); font-weight:700}
+.ntitle{flex:1; color:var(--txt); text-decoration:none}
+.ntitle:hover{color:var(--acc); text-decoration:underline}
+.nsrc{color:var(--dim); font-size:10px; white-space:nowrap}
+.nhot{color:#ff7b72; font-weight:700; font-size:9px; letter-spacing:.06em}
+/* bot hits: the move and its explanation on one line */
+.bhit{border-bottom:1px solid var(--line); padding:7px 12px}
+.bhit .bsym{font-weight:700; color:var(--txt); margin-right:8px}
+.bhit .bmove{font-weight:700; margin-right:8px; font-variant-numeric:tabular-nums}
+.bhit .batr{color:var(--dim); font-size:10px}
+.bhit .bunexp{color:var(--dim); font-size:10px; font-style:italic}
+.bhit .bnews{margin:4px 0 0 14px}

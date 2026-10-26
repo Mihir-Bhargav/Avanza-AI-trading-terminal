@@ -1,0 +1,32 @@
+{
+  "accounts": [
+    {
+      "account": "Account B",
+      "name": "Account B",
+      "type": "INVESTMENT_SAVINGS_ACCOUNT",
+      "status": "ACTIVE",
+      "total_value": 19556,
+      "cash": 1759,
+      "buying_power": 1259,
+      "buying_power_without_credit": 4752,
+      "unit": "SEK"
+    },
+    {
+      "account": "Account A",
+      "name": "Account A",
+      "type": "AKTIEFONDKONTO",
+      "status": "ACTIVE",
+      "total_value": 76270,
+      "cash": 4028,
+      "buying_power": 1591,
+      "buying_power_without_credit": 2887,
+      "unit": "SEK"
+    }
+  ],
+  "totals_sek": {
+    "total_value": 58673,
+    "cash": 9115,
+    "buying_power": 5040
+  },
+  "non_sek_amounts_not_in_totals": []
+}

@@ -1,0 +1,85 @@
+{
+  "_comment": "SNAPSHOT, not a live membership feed. Curated largest members per GICS sector for the Markets page sector overview (terminal/markets.py). Index membership checked against Wikipedia on as_of; 'largest' is by approximate market cap at that date and will drift. Refresh by hand when an index reconstitutes. Symbols are Yahoo Finance form (BRK-B, ERIC-B.ST).",
+  "as_of": "2026-09-24",
+  "sector_etfs": {
+    "Technology": "XLK",
+    "Communication Services": "XLC",
+    "Consumer Discretionary": "XLY",
+    "Consumer Staples": "XLP",
+    "Energy": "XLE",
+    "Financials": "XLF",
+    "Health Care": "XLV",
+    "Industrials": "XLI",
+    "Materials": "XLB",
+    "Real Estate": "XLRE",
+    "Utilities": "XLU"
+  },
+  "indexes": {
+    "sp500": {
+      "label": "S&P 500",
+      "market": "us",
+      "sector_change": "etf",
+      "sectors": {
+        "Technology": [["NVDA", "Nvidia"], ["AAPL", "Apple"], ["MSFT", "Microsoft"], ["AVGO", "Broadcom"], ["ORCL", "Oracle"], ["PLTR", "Palantir"], ["AMD", "AMD"], ["MU", "Micron"], ["CSCO", "Cisco"], ["IBM", "IBM"]],
+        "Communication Services": [["GOOGL", "Alphabet"], ["META", "Meta Platforms"], ["NFLX", "Netflix"], ["TMUS", "T-Mobile US"], ["DIS", "Disney"], ["T", "AT&T"], ["VZ", "Verizon"], ["APP", "AppLovin"], ["CMCSA", "Comcast"], ["TTWO", "Take-Two"]],
+        "Consumer Discretionary": [["AMZN", "Amazon"], ["TSLA", "Tesla"], ["HD", "Home Depot"], ["MCD", "McDonald's"], ["BKNG", "Booking"], ["TJX", "TJX"], ["LOW", "Lowe's"], ["SBUX", "Starbucks"], ["NKE", "Nike"], ["ABNB", "Airbnb"]],
+        "Consumer Staples": [["WMT", "Walmart"], ["COST", "Costco"], ["PG", "Procter & Gamble"], ["KO", "Coca-Cola"], ["PM", "Philip Morris"], ["PEP", "PepsiCo"], ["MO", "Altria"], ["MDLZ", "Mondelez"], ["CL", "Colgate-Palmolive"], ["TGT", "Target"]],
+        "Energy": [["XOM", "Exxon Mobil"], ["CVX", "Chevron"], ["COP", "ConocoPhillips"], ["WMB", "Williams"], ["EOG", "EOG Resources"], ["KMI", "Kinder Morgan"], ["SLB", "SLB"], ["PSX", "Phillips 66"], ["MPC", "Marathon Petroleum"], ["OKE", "ONEOK"]],
+        "Financials": [["BRK-B", "Berkshire Hathaway"], ["JPM", "JPMorgan Chase"], ["V", "Visa"], ["MA", "Mastercard"], ["BAC", "Bank of America"], ["WFC", "Wells Fargo"], ["GS", "Goldman Sachs"], ["MS", "Morgan Stanley"], ["AXP", "American Express"], ["SCHW", "Charles Schwab"]],
+        "Health Care": [["LLY", "Eli Lilly"], ["JNJ", "Johnson & Johnson"], ["ABBV", "AbbVie"], ["UNH", "UnitedHealth"], ["MRK", "Merck"], ["ABT", "Abbott"], ["TMO", "Thermo Fisher"], ["ISRG", "Intuitive Surgical"], ["AMGN", "Amgen"], ["PFE", "Pfizer"]],
+        "Industrials": [["GE", "GE Aerospace"], ["GEV", "GE Vernova"], ["CAT", "Caterpillar"], ["RTX", "RTX"], ["UBER", "Uber"], ["HON", "Honeywell"], ["BA", "Boeing"], ["UNP", "Union Pacific"], ["ETN", "Eaton"], ["DE", "Deere"]],
+        "Materials": [["LIN", "Linde"], ["SHW", "Sherwin-Williams"], ["NEM", "Newmont"], ["FCX", "Freeport-McMoRan"], ["APD", "Air Products"], ["ECL", "Ecolab"], ["CRH", "CRH"], ["CTVA", "Corteva"], ["NUE", "Nucor"], ["VMC", "Vulcan Materials"]],
+        "Real Estate": [["WELL", "Welltower"], ["PLD", "Prologis"], ["AMT", "American Tower"], ["EQIX", "Equinix"], ["SPG", "Simon Property"], ["O", "Realty Income"], ["DLR", "Digital Realty"], ["PSA", "Public Storage"], ["CBRE", "CBRE"], ["CCI", "Crown Castle"]],
+        "Utilities": [["NEE", "NextEra Energy"], ["SO", "Southern Co"], ["CEG", "Constellation Energy"], ["DUK", "Duke Energy"], ["VST", "Vistra"], ["AEP", "American Electric Power"], ["SRE", "Sempra"], ["D", "Dominion Energy"], ["EXC", "Exelon"], ["XEL", "Xcel Energy"]]
+      }
+    },
+    "nasdaq100": {
+      "label": "Nasdaq 100",
+      "market": "us",
+      "sector_change": "etf",
+      "sectors": {
+        "Technology": [["NVDA", "Nvidia"], ["AAPL", "Apple"], ["MSFT", "Microsoft"], ["AVGO", "Broadcom"], ["PLTR", "Palantir"], ["AMD", "AMD"], ["MU", "Micron"], ["ASML", "ASML"], ["CSCO", "Cisco"], ["LRCX", "Lam Research"], ["AMAT", "Applied Materials"], ["INTC", "Intel"]],
+        "Communication Services": [["GOOGL", "Alphabet"], ["META", "Meta Platforms"], ["NFLX", "Netflix"], ["TMUS", "T-Mobile US"], ["APP", "AppLovin"], ["CMCSA", "Comcast"], ["TTWO", "Take-Two"], ["WBD", "Warner Bros. Discovery"]],
+        "Consumer Discretionary": [["AMZN", "Amazon"], ["TSLA", "Tesla"], ["BKNG", "Booking"], ["MELI", "MercadoLibre"], ["SBUX", "Starbucks"], ["ORLY", "O'Reilly Auto Parts"], ["MAR", "Marriott"], ["ABNB", "Airbnb"], ["DASH", "DoorDash"], ["ROST", "Ross Stores"]],
+        "Consumer Staples": [["WMT", "Walmart"], ["COST", "Costco"], ["PEP", "PepsiCo"], ["MDLZ", "Mondelez"], ["MNST", "Monster Beverage"], ["KDP", "Keurig Dr Pepper"]],
+        "Health Care": [["ISRG", "Intuitive Surgical"], ["AMGN", "Amgen"], ["GILD", "Gilead"], ["VRTX", "Vertex"], ["REGN", "Regeneron"], ["IDXX", "Idexx Laboratories"], ["DXCM", "Dexcom"]],
+        "Industrials": [["HON", "Honeywell"], ["ADP", "ADP"], ["CTAS", "Cintas"], ["AXON", "Axon"], ["CSX", "CSX"], ["PCAR", "Paccar"], ["FAST", "Fastenal"], ["CPRT", "Copart"], ["ODFL", "Old Dominion"], ["PAYX", "Paychex"]],
+        "Utilities": [["CEG", "Constellation Energy"], ["AEP", "American Electric Power"], ["EXC", "Exelon"], ["XEL", "Xcel Energy"]],
+        "Energy": [["BKR", "Baker Hughes"], ["FANG", "Diamondback Energy"]],
+        "Materials": [["LIN", "Linde"]],
+        "Financials": [["PYPL", "PayPal"]]
+      }
+    },
+    "dow30": {
+      "label": "Dow 30",
+      "market": "us",
+      "sector_change": "etf",
+      "sectors": {
+        "Technology": [["NVDA", "Nvidia"], ["AAPL", "Apple"], ["MSFT", "Microsoft"], ["CSCO", "Cisco"], ["IBM", "IBM"], ["CRM", "Salesforce"]],
+        "Communication Services": [["GOOGL", "Alphabet"], ["DIS", "Disney"]],
+        "Consumer Discretionary": [["AMZN", "Amazon"], ["HD", "Home Depot"], ["MCD", "McDonald's"], ["NKE", "Nike"]],
+        "Consumer Staples": [["WMT", "Walmart"], ["PG", "Procter & Gamble"], ["KO", "Coca-Cola"]],
+        "Energy": [["CVX", "Chevron"]],
+        "Financials": [["JPM", "JPMorgan Chase"], ["V", "Visa"], ["GS", "Goldman Sachs"], ["AXP", "American Express"], ["TRV", "Travelers"]],
+        "Health Care": [["JNJ", "Johnson & Johnson"], ["UNH", "UnitedHealth"], ["MRK", "Merck"], ["AMGN", "Amgen"]],
+        "Industrials": [["CAT", "Caterpillar"], ["HON", "Honeywell"], ["BA", "Boeing"], ["MMM", "3M"]],
+        "Materials": [["SHW", "Sherwin-Williams"]]
+      }
+    },
+    "omxs30": {
+      "label": "OMXS30",
+      "market": "sweden",
+      "sector_change": "members_avg",
+      "sectors": {
+        "Industrials": [["ABB.ST", "ABB"], ["ATCO-A.ST", "Atlas Copco A"], ["VOLV-B.ST", "Volvo B"], ["SAND.ST", "Sandvik"], ["ASSA-B.ST", "Assa Abloy B"], ["SAAB-B.ST", "Saab B"], ["EPI-A.ST", "Epiroc A"], ["ALFA.ST", "Alfa Laval"], ["LIFCO-B.ST", "Lifco B"], ["SKF-B.ST", "SKF B"], ["ADDT-B.ST", "Addtech B"], ["NIBE-B.ST", "Nibe B"], ["SKA-B.ST", "Skanska B"]],
+        "Financials": [["INVE-B.ST", "Investor B"], ["NDA-SE.ST", "Nordea"], ["SWED-A.ST", "Swedbank A"], ["SEB-A.ST", "SEB A"], ["SHB-A.ST", "Handelsbanken A"], ["EQT.ST", "EQT"], ["INDU-C.ST", "Industrivärden C"]],
+        "Health Care": [["AZN.ST", "AstraZeneca"]],
+        "Technology": [["ERIC-B.ST", "Ericsson B"], ["HEXA-B.ST", "Hexagon B"]],
+        "Consumer Discretionary": [["HM-B.ST", "H&M B"], ["EVO.ST", "Evolution"]],
+        "Communication Services": [["TELIA.ST", "Telia"], ["TEL2-B.ST", "Tele2 B"]],
+        "Consumer Staples": [["ESSITY-B.ST", "Essity B"]],
+        "Materials": [["BOL.ST", "Boliden"], ["SCA-B.ST", "SCA B"]]
+      }
+    }
+  }
+}

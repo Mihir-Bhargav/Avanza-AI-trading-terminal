@@ -1,0 +1,81 @@
+# INDIA WATCHLIST — every symbol validated against yfinance 2026-08-03.
+# One ticker per line; text after # is ignored.
+#
+# NOTE ON NIFTY1! (futures): yfinance carries NO NSE futures, so it cannot be
+# screened here. ^NSEI (spot) is the proxy for ranking; keep NIFTY1! on your
+# TradingView list for the actual tradeable contract and for volume/order flow,
+# since spot reports zero volume.
+
+# --- Indices ---
+^NSEI                 # NIFTY 50
+^NSEBANK              # BANKNIFTY
+
+# --- Your existing names ---
+RELIANCE.NS
+INFY.NS
+TITAN.NS
+GODREJPROP.NS         # Godrej Properties — matched your 2,089.7 (CP=1,070, IND=1,309)
+RPOWER.NS             # Reliance Power — high beta, retail-heavy
+
+# --- Private banks / financials ---
+HDFCBANK.NS
+ICICIBANK.NS
+AXISBANK.NS
+KOTAKBANK.NS
+SBIN.NS
+
+# --- PSU banks (high beta, move hard on policy) ---
+PNB.NS
+CANBK.NS
+BANKBARODA.NS
+
+# --- IT ---
+TCS.NS
+HCLTECH.NS
+WIPRO.NS
+TECHM.NS
+
+# --- Auto ---
+MARUTI.NS
+M&M.NS
+TMPV.NS               # Tata Motors Passenger Vehicles (post-demerger)
+BAJAJ-AUTO.NS
+
+# --- Metals (cyclical, highest beta cluster) ---
+TATASTEEL.NS
+JSWSTEEL.NS
+HINDALCO.NS
+VEDL.NS
+
+# --- Defence / capital goods (2026 capex + defence allocation theme) ---
+HAL.NS
+BEL.NS
+BHEL.NS
+LT.NS
+
+# --- Energy / power ---
+ONGC.NS
+NTPC.NS
+POWERGRID.NS
+ADANIENT.NS           # beta ~2.5, one of the most volatile large caps
+
+# --- Pharma ---
+SUNPHARMA.NS
+DRREDDY.NS
+CIPLA.NS
+
+# --- Consumer / telecom ---
+ITC.NS
+HINDUNILVR.NS
+BHARTIARTL.NS
+
+# --- New-age tech ---
+ETERNAL.NS            # formerly ZOMATO — renamed, old ticker is delisted
+PAYTM.NS
+
+# --- High-beta movers (small size only; these gap and trend hard) ---
+IRFC.NS
+IREDA.NS
+SUZLON.NS
+IDEA.NS               # Vodafone Idea — penny-level, very high beta
+DLF.NS                # realty

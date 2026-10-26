@@ -1,0 +1,35 @@
+# SWEDEN — OMXS30 + large caps. Validated 2026-08-04.
+# Traded on Avanza via leveraged certificates / mini-futures (directional, linear,
+# KNOCKOUT barrier — a touch kills the position permanently, so stops matter more
+# here than with options).
+^OMX                  # OMXS30 index
+ERIC-B.ST
+VOLV-B.ST
+ATCO-A.ST
+ATCO-B.ST
+INVE-B.ST
+SEB-A.ST
+SWED-A.ST
+SHB-A.ST
+NDA-SE.ST
+HM-B.ST
+ASSA-B.ST
+SAND.ST
+SKF-B.ST
+ALFA.ST
+TELIA.ST
+ESSITY-B.ST
+EVO.ST
+BOL.ST                # Boliden — metals, high beta
+GETI-B.ST
+HEXA-B.ST
+SINCH.ST
+NIBE-B.ST
+TEL2-B.ST
+ELUX-B.ST
+SCA-B.ST
+KINV-B.ST
+AZN.ST
+SAAB-B.ST             # defence — 2026 theme, high beta
+LIFCO-B.ST
+EQT.ST

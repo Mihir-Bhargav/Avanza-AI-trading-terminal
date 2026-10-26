@@ -1,0 +1,16 @@
+# COMMODITIES — futures + liquid ETF proxies. Validated 2026-08-04.
+# Avanza certificates typically track the futures; ETFs included as a cross-check
+# on direction and for US-session confirmation.
+GC=F                  # Gold
+SI=F                  # Silver
+PL=F                  # Platinum
+HG=F                  # Copper
+CL=F                  # WTI crude
+BZ=F                  # Brent
+NG=F                  # Natural gas
+GLD                   # Gold ETF
+SLV                   # Silver ETF
+USO                   # Oil ETF
+GDX                   # Gold miners — higher beta than metal
+COPX                  # Copper miners
+DBC                   # Broad commodity

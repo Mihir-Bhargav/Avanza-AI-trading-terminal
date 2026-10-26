@@ -1,0 +1,24 @@
+{
+ "data": [
+  {
+   "transaction_date": "2026-08-27",
+   "ticker": "NVDA",
+   "executive": "EXEC, ONE",
+   "executive_title": "Director",
+   "security_type": "Common Stock",
+   "acquisition_or_disposal": "D",
+   "shares": "25000.0",
+   "share_price": "180.50"
+  },
+  {
+   "transaction_date": "2026-08-26",
+   "ticker": "NVDA",
+   "executive": "EXEC, TWO",
+   "executive_title": "CFO",
+   "security_type": "Rst. Stock Unit",
+   "acquisition_or_disposal": "A",
+   "shares": "1000",
+   "share_price": "0"
+  }
+ ]
+}

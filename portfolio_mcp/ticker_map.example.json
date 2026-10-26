@@ -1,0 +1,6 @@
+{
+  "_about": "Template. Copy to ticker_map.json (gitignored -- it lists your holdings) and add one entry per holding: Avanza orderbook id -> Yahoo ticker. Only add an entry after a same-currency live price match against yfinance (<3%), plus ISIN if the listing is ambiguous. Unmapped holdings return yahoo_ticker: null.",
+  "map": {
+    "4478": {"yahoo": "NVDA", "name": "NVIDIA"}
+  }
+}

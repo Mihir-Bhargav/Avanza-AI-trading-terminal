@@ -1,0 +1,144 @@
+{
+  "type": "insiders",
+  "configured": true,
+  "rule": "SEC Form 4 · within 2 business days",
+  "as_of": "2026-09-24T11:32:01+00:00",
+  "source": "MOCK DATA (synthetic) · shaped like Alpha Vantage INSIDER_TRANSACTIONS",
+  "partial": true,
+  "skipped": [
+    "TSLA",
+    "QCOM"
+  ],
+  "skipped_reasons": {
+    "TSLA": "live-fetch cap reached for this request",
+    "QCOM": "live-fetch cap reached for this request"
+  },
+  "symbols": [
+    "AAPL",
+    "AMD",
+    "ASML",
+    "AVGO",
+    "GOOGL",
+    "MSFT",
+    "MU",
+    "NVDA",
+    "TSM"
+  ],
+  "window_days": 180,
+  "live_fetches": 0,
+  "holdings_note": null,
+  "rows": [
+    {
+      "filed": null,
+      "traded": "2026-09-23",
+      "lag_days": null,
+      "who": "Officer A",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "Chief Financial Officer",
+      "symbol": "NVDA",
+      "side": "sell",
+      "amount_min": 4200000,
+      "amount_max": 4200000,
+      "amount_label": "$4.2M",
+      "yours": "WATCH",
+      "security": "Common Stock"
+    },
+    {
+      "filed": null,
+      "traded": "2026-09-22",
+      "lag_days": null,
+      "who": "Director A",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "Director",
+      "symbol": "AMD",
+      "side": "buy",
+      "amount_min": 900000,
+      "amount_max": 900000,
+      "amount_label": "$0.9M",
+      "yours": "WATCH",
+      "security": "Common Stock"
+    },
+    {
+      "filed": null,
+      "traded": "2026-09-20",
+      "lag_days": null,
+      "who": "Officer B",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "EVP, General Counsel",
+      "symbol": "MSFT",
+      "side": "sell",
+      "amount_min": 1581000,
+      "amount_max": 1581000,
+      "amount_label": "$1.6M",
+      "yours": "HELD",
+      "security": "Common Stock"
+    },
+    {
+      "filed": null,
+      "traded": "2026-09-19",
+      "lag_days": null,
+      "who": "Director B",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "Director",
+      "symbol": "MU",
+      "side": "buy",
+      "amount_min": 402500,
+      "amount_max": 402500,
+      "amount_label": "$0.4M",
+      "yours": "WATCH",
+      "security": "Common Stock"
+    },
+    {
+      "filed": null,
+      "traded": "2026-09-18",
+      "lag_days": null,
+      "who": "Officer C",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "President",
+      "symbol": "AVGO",
+      "side": "sell",
+      "amount_min": 2800000,
+      "amount_max": 2800000,
+      "amount_label": "$2.8M",
+      "yours": "WATCH",
+      "security": "Common Stock"
+    },
+    {
+      "filed": null,
+      "traded": "2026-09-15",
+      "lag_days": null,
+      "who": "Officer D",
+      "chamber": null,
+      "party": null,
+      "owner": null,
+      "role": "Chief Accounting Officer",
+      "symbol": "GOOGL",
+      "side": "other",
+      "amount_min": null,
+      "amount_max": null,
+      "amount_label": "1,200 sh",
+      "yours": "HELD",
+      "security": "Restricted Stock Units"
+    }
+  ],
+  "most_bought": [
+    {
+      "symbol": "AMD",
+      "count": 1
+    },
+    {
+      "symbol": "MU",
+      "count": 1
+    }
+  ]
+}

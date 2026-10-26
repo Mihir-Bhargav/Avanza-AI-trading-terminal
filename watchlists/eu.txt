@@ -1,0 +1,62 @@
+# EU — DAX / CAC / AEX / MIB / IBEX / SMI majors. Validated 2026-08-04.
+# Avanza carries certificates across these.
+^GDAXI                # DAX
+^FCHI                 # CAC 40
+^STOXX50E             # Euro Stoxx 50
+# --- Germany ---
+SAP.DE
+SIE.DE
+ALV.DE
+DTE.DE
+MBG.DE
+BMW.DE
+VOW3.DE
+BAS.DE
+BAYN.DE
+ADS.DE
+MUV2.DE
+RHM.DE                # Rheinmetall — defence, highest beta in DAX
+IFX.DE                # Infineon — semis, tracks the US semi complex
+DBK.DE
+# --- France ---
+MC.PA
+OR.PA
+TTE.PA
+AIR.PA
+SAN.PA
+BNP.PA
+SU.PA
+# --- Netherlands ---
+ASML.AS               # semis — the EU bellwether
+ADYEN.AS
+INGA.AS
+PRX.AS
+# --- Italy / Spain / Switzerland ---
+ISP.MI
+ENI.MI
+SAN.MC
+IBE.MC
+NESN.SW
+NOVN.SW
+UBSG.SW
+# --- UK (LSE, prices in pence) ---
+^FTSE                 # FTSE 100
+SHEL.L
+BP.L
+AZN.L
+GSK.L
+HSBA.L
+BARC.L
+LLOY.L
+STAN.L
+RIO.L                 # miners — commodity beta
+AAL.L                 # Anglo American — commodity beta
+GLEN.L                # Glencore — commodity beta
+ULVR.L
+DGE.L
+BATS.L
+LSEG.L
+REL.L
+NG.L
+VOD.L
+TSCO.L

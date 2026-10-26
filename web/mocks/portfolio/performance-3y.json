@@ -1,0 +1,58 @@
+{
+  "period": "3y",
+  "per_account": [
+    {
+      "account": "Account B",
+      "name": "Account B",
+      "type": null,
+      "change": 2116,
+      "change_unit": "SEK",
+      "change_pct": 10.94
+    },
+    {
+      "account": "Account A",
+      "name": "Account A",
+      "type": null,
+      "change": 1736,
+      "change_unit": "SEK",
+      "change_pct": 95.28
+    }
+  ],
+  "source": {
+    "per_account": "overview.mock",
+    "positions": "insights.mock"
+  },
+  "insights": {
+    "total_outcome_sek": 2762,
+    "price_development_sek": 4839,
+    "dividends_sek": 3,
+    "best": [
+      {
+        "name": "Sample Index Fund",
+        "isin": null,
+        "instrument_type": "FUND",
+        "outcome_sek": 6072,
+        "outcome_pct": 71.4,
+        "dividends_sek": 3
+      },
+      {
+        "name": "Sample Software Co",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": 1648,
+        "outcome_pct": 15.08,
+        "dividends_sek": 9
+      }
+    ],
+    "worst": [
+      {
+        "name": "Sample Semiconductor A",
+        "isin": null,
+        "instrument_type": "STOCK",
+        "outcome_sek": -554,
+        "outcome_pct": -1.81,
+        "dividends_sek": 3
+      }
+    ]
+  }
+}
