@@ -21,6 +21,12 @@ agent that explains what is moving but never places a trade.
   <img alt="Read-only" src="https://img.shields.io/badge/orders-read--only-critical">
 </p>
 
+## Screenshots
+
+| Landing | Markets | Disclosures | Chart |
+|---|---|---|---|
+| ![Landing](docs/screenshots/landing.png) | ![Markets](docs/screenshots/markets-heatmap.png) | ![Disclosures](docs/screenshots/disclosures.png) | ![Chart](docs/screenshots/chart.png) |
+
 ---
 
 ## Pages
